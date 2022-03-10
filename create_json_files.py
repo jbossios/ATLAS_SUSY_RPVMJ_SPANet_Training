@@ -4,7 +4,7 @@ import copy
 import json
 from default_dict import default_dict
 
-def create_yaml(input_path, input_version, network_version, evt_type, output_path, mass, flavour):
+def create_json(input_path, input_version, network_version, evt_type, output_path, mass, flavour):
   # Create output folder
   output_folder = f'{output_path}{network_version}/'
   if not os.path.exists(output_folder):
@@ -30,10 +30,11 @@ if __name__ == '__main__':
   versions = [f'v{i}' for i in range(41,61)] # input versions
   mass = '1400'
   flavour = 'UDB_UDS'
+  event_types = ['partial'] # options: partial, full
   # Do not modify (below this line)
   counter = starting_network_version
   for version in versions: # loop over input versions
-    for case in ['full', 'partial']:
-      create_yaml(input_path=in_path, input_version=version, network_version=f'v{counter}', evt_type=case, output_path=out_path, mass=mass, flavour=flavour)
+    for case in event_types:
+      create_json(input_path=in_path, input_version=version, network_version=f'v{counter}', evt_type=case, output_path=out_path, mass=mass, flavour=flavour)
       counter += 1
   print('>>> ALL DONE <<<')
