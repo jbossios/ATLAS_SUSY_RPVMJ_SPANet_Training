@@ -32,6 +32,22 @@ python copy_jsons.py
 
 **NOTE:** This step is currently ran in a Jupyter notebook from Kubeflow (do not forget to run ```kinit USERNAME``` before running to get EOS access).
 
+To open a jupyter notebook on Kubeflow, follow these steps:
+
+1. ssh -D 8090 lxplus.cern.ch
+2.  google-chrome --proxy-server=socks5://127.0.0.1:8090
+3. Go to https://ml.cern.ch
+4. Create a notebook using 1 GPU and the following image: gitlab-registry.cern.ch/ai-ml/kubeflow_images/atlas-pytorch-gpu:0183442cdb7ad58434d6626b2ac6ff2befffa9a9
+
+Get SPAnet:
+
+```
+cp -r /eos/atlas/atlascerngroupdisk/phys-susy/RPV_mutlijets_ANA-SUSY-2019-24/spanet_jona/SPANET_package_backup_notebook/SPANet .
+cd SPANet/
+``` 
+
+The ```run_signal_training.py``` and ```copy_predictions.py``` scripts should be already on the copied SPANet version, but clone this repo if they need to be updated.
+
 Set the following in ```run_signal_training.py```:
 
 - ```run_type```: 'train' or 'predict'
