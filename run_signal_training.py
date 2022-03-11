@@ -5,6 +5,9 @@ if __name__ == '__main__':
   run_type = 'predict' # options: train, test, predict
   path = '/eos/atlas/atlascerngroupdisk/phys-susy/RPV_mutlijets_ANA-SUSY-2019-24/spanet_jona/SPANET_OptionFiles/'
   versions = [i for i in range(72, 92)]
+  # create dummy output folder to force the output version that I want
+  if run_type == 'train' and not os.path.exists(f'spanet_output/version_{versions[0]-1}'):
+    os.makedirs(f'spanet_output/version_{versions[0]-1}')
   commands = []
   for version in versions:
     inpath = f'{path}v{version}/'
