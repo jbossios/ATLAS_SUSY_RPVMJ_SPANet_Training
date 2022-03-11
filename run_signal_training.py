@@ -2,7 +2,9 @@ import os
 import sys
 
 if __name__ == '__main__':
-  run_type = 'predict' # options: train, test, predict
+  """ Submit SPANet training or evaluation jobs """
+  # Settings
+  run_type = 'predict' # options: train, predict
   path = '/eos/atlas/atlascerngroupdisk/phys-susy/RPV_mutlijets_ANA-SUSY-2019-24/spanet_jona/SPANET_OptionFiles/'
   versions = [i for i in range(72, 92)]
   # create dummy output folder to force the output version that I want

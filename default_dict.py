@@ -1,3 +1,4 @@
+# SPANet's default settings
 default_dict = {
   "balance_jets": False,
   "balance_particles": False,

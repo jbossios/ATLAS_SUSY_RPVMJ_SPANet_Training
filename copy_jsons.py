@@ -1,9 +1,12 @@
 import os
 
 if __name__ == '__main__':
+  """ Copy JSON files produced with create_json_files.py to the SPANet package on EOS """
+  # Settings
   eos_in = '/eos/atlas/atlascerngroupdisk/phys-susy/RPV_mutlijets_ANA-SUSY-2019-24/spanet_jona/SPANET_OptionFiles/'
   eos_out = '/eos/atlas/atlascerngroupdisk/phys-susy/RPV_mutlijets_ANA-SUSY-2019-24/spanet_jona/SPANET_package_backup_notebook/SPANet/options_files/'
-  versions = [f'v{i}' for i in range(91,92)] # input versions
+  versions = [f'v{i}' for i in range(72,92)] # input versions
+  # Do not modify (below this line)
   commands = []
   for version in versions:
     option_file = list(os.listdir(f'{eos_in}{version}/'))[0]
