@@ -30,7 +30,7 @@ python copy_jsons.py
 
 ## Submit training/evaluation jobs
 
-**NOTE:** This step is currently ran in a Jupyter notebook from Kubeflow.
+**NOTE:** This step is currently ran in a Jupyter notebook from Kubeflow (do not forget to run ```kinit USERNAME``` before running to get EOS access).
 
 Set the following in ```run_signal_training.py```:
 
