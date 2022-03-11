@@ -16,8 +16,8 @@ if __name__ == '__main__':
           lines = opt.readlines()
           for line in lines:
             if 'testing' in line and 'h5' in line:
-              h5_file = line.split(':')[1].replace(',' ,'').replace('"', '')
-        command = f'python3 predict.py ./spanet_output/version_{version} ./signal_full_v{version}_output.h5 -tf{h5_file} --gpus > Log_v{version}_{run_type} 2>&1'
+              h5_file = line.split(':')[1].replace(',' ,'').replace('"', '').replace('\n', '')
+        command = f'python3 predict.py ./spanet_output/version_{version} ./signal_full_v{version}_output.h5 -tf{h5_file} --gpu > Log_v{version}_{run_type} 2>&1'
       else:
         print(F'ERROR: {run_type} not implemented yet, exiting')
         sys.exit(1)
