@@ -5,7 +5,7 @@ if __name__ == '__main__':
   # Settings
   eos_in = '/eos/atlas/atlascerngroupdisk/phys-susy/RPV_mutlijets_ANA-SUSY-2019-24/spanet_jona/SPANET_OptionFiles/'
   eos_out = '/eos/atlas/atlascerngroupdisk/phys-susy/RPV_mutlijets_ANA-SUSY-2019-24/spanet_jona/SPANET_package_backup_notebook/SPANet/options_files/'
-  versions = [f'v{i}' for i in range(72,92)] # input versions
+  versions = [f'v{i}' for i in range(96, 97)]  # network versions
   # Do not modify (below this line)
   commands = []
   for version in versions:

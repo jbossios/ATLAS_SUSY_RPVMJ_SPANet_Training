@@ -42,5 +42,6 @@ default_dict = {
   "trial_time": "",
   "usable_gpus": "",
   "validation_file": "",
-  "verbose_output": True
+  "verbose_output": True,
+  "testing_file": 'GenerateMe',
 }
